@@ -88,8 +88,10 @@ function draw()
   }
     
   w = capture.width;
-  h = capture.height;
-  img2[t] = capture.get(0, 0, w, h);
+//  h = capture.height;
+  h = w*3/4;
+  
+  img2[t] = capture.get(0, (capture.height - h)/2, w, h);
   
   push();
   translate(mx+ww,my+hh);
@@ -102,7 +104,7 @@ function draw()
   }
   
   // モニター部分に走査線を重ねる
-  stroke(100,170,240,200);
+  stroke(100,170,240,100);
   for(i = 0; i<hh ; i+=2)
   {
     line(0,i,ww,i);
