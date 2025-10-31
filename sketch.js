@@ -104,7 +104,7 @@ function draw()
   }
   
   // モニター部分に走査線を重ねる
-  strokeWeight(0.01);
+  strokeWeight(0.1);
   stroke(100,170,240,60);
   for(i = 0; i<hh ; i+=2)
   {
